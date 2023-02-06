@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <button id="increment">Increment</button>
+    <p id="count">0</p>
+
+  <script>
+    const increment = document.querySelector("#increment");
+    const count = document.querySelector("#count");
+    let countValue = 0;
+
+    increment.addEventListener("click", function() {
+      countValue++;
+      count.innerHTML = countValue;
+      count.style.fontSize = countValue + "px";
+    });
+  </script>
+</html>
