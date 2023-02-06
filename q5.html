@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <script>
+      function calculate() {
+        const in1 = document.querySelector("#in1");
+        const in2 = document.querySelector("#in2");
+        const operator = this.innerHTML;
+        const value1 = Number.parseInt(in1.value);
+        const value2 = Number.parseInt(in2.value);
+        let result;
+        switch (operator) {
+          case "+":
+            result = value1 + value2;
+            break;
+          case "-":
+            result = value1 - value2;
+            break;
+          case "*":
+            result = value1 * value2;
+            break;
+          case "/":
+            result = value1 / value2;
+            break;
+        }
+        document.querySelector("#result").innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="in1">
+      <input type="text" id="in2">
+      <br><br>
+      <button id="add">+</button>
+      <button id="subtract">-</button>
+      <button id="multiply">*</button>
+      <button id="divide">/</button>
+      <br><br>
+      <div id="result"></div>
+    </div>
+    <script>
+      document.querySelector("#add").addEventListener("click", calculate);
+      document.querySelector("#subtract").addEventListener("click", calculate);
+      document.querySelector("#multiply").addEventListener("click", calculate);
+      document.querySelector("#divide").addEventListener("click", calculate);
+    </script>
+  </body>
+</html>
